@@ -23,3 +23,6 @@ You should have a local Bolt on localhost:8080!
 Made By DrNate1010, vannsigma, And Neven12376
 Enjoy the Afterlife!
 
+"pee in my mouth" -vannsigma 2024
+"give me head" - Drnate1010 2024
+"im yellow, just like the chiggas" -Neven12376 2024
