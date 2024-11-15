@@ -5,30 +5,32 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
+  <script src="https://kit.fontawesome.com/2a77da1b76.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/images/phantom-rounded.png" />
   <link rel="stylesheet" href="/assets/main.css" />
 
-  <!-- Prefetching Resources -->
-  <link rel="prefetch" href="/scramjet/scramjet.worker.js" />
-  <link rel="prefetch" href="/scramjet/scramjet.shared.js" />
+  <link rel="prefetch" href="/scram/scramjet.worker.js" />
+  <link rel="prefetch" href="/scram/scramjet.shared.js" />
 
-  <!-- JavaScript Libraries with Defer Attribute -->
   <script src="/baremux/index.js" defer></script>
   <script src="/epoxy/index.js" defer></script>
-  <script src="/ultraviolet/uv.bundle.js" defer></script>
-  <script src="/ultraviolet/uv.config.js" defer></script>
+  <script src="/uv/uv.bundle.js" defer></script>
+  <script src="/uv/uv.config.js" defer></script>
   <script src="/sw.js" defer></script>
   <script src="https://unpkg.com/@rubynetwork/rammerhead-browser" defer></script>
 </head>
 
 <body>
   <div class="toolbar">
-    <div class="url-bar">
-    <button class="home-button" onclick="goBack()">→</button>
-    <button class="home-button" onclick="goForward()">←</button>
-    <button class="home-button" onclick="addTab()">+ Tab</button>
-    <button class="home-button" onclick="toggleFullScreen()">⛶</button>
-    <button class="home-button" onclick="toggleTheme()">🏠︎</button>
+    <div class="tabs">
+
+    </div>
+    <button class="home-button" onclick="goForward()"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="home-button" onclick="goBack()"><i class="fa-solid fa-arrow-right"></i></button>
+    <button class="home-button" onclick="refreshTab()"><i class="fa-solid fa-rotate-right"></i></button>
+    <button class="home-button" onclick="goHome()"><i class="fa-solid fa-home"></i></button>
+    <input type="text" id="url-input" placeholder="Enter a url or search term">
+    <button class="home-button" id="setttings" onclick="openSettings()"><i class="fa-solid fa-gear"></i></button>
 </div>
   <div class="title">
     <h1 id="title">Phantom</h1>
@@ -37,11 +39,11 @@
   <form id="form">
     <input id="input" placeholder="Search the Web Freely..." />
   </form>
-
+  <h1 id="time"></h1>
   </script>
 
   <!-- JavaScript files at the end for better performance -->
-  <script src="/scramjet/scramjet.controller.js" defer></script>
+  <script src="/scram/scramjet.controller.js" defer></script>
   <script src="/assets/main.js" defer></script>
   <script src="/assets/time.js" defer></script>
 
