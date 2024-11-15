@@ -1,5 +1,5 @@
 {
-  "name": "bolt-unblocker",
+  "name": "phantom-proxy",
   "version": "1.6.0",
   "type": "module",
   "packageManager": "pnpm@9.12.3",
@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Donut Dev",
+  "author": "DrNate1010",
   "license": "MIT",
   "dependencies": {
     "@mercuryworkshop/bare-mux": "^2.1.6",
