@@ -4,12 +4,7 @@
     --font: #ffffff;
 }
 
-@font-face {
-    font-family: "font";
-    /*a name to be used later*/
-    src: url("../fonts/font.otf");
-    /*URL to font*/
-}
+
 
 #particles-js {
     position: fixed;
@@ -315,135 +310,10 @@ body {
     color: #0099ff;
     text-shadow: #0099ff 0px 0px 10px;
 }
-
-#cog {
-    width: 20px;
-    height: 20px;
-    filter: brightness(100) drop-shadow(0 0 10px rgba(0, 153, 255, 0.8));
-    margin: auto;
-    margin-right: 10px;
-}
-
-
-#controller {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 153, 255, 0.8));
-    margin: auto;
-    margin-right: 10px;
-}
-
-#texting {
-    width: 25px;
-    height: 25px;
-    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 153, 255, 0.8));
-    margin: auto;
-    margin-right: 10px;
-}
-
-.apps {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.app {
-    background-color: var(--primary);
-    box-shadow: 0 0 30px rgba(0, 153, 255, 0.8);
-    border-radius: 20px;
-    color: var(--secondary);
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.app:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-}
-
-.app img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.app h3 {
-    font-size: 25px;
-    margin-top: 10px;
-}
-
-.apps {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.game {
-    background-color: var(--primary);
-    box-shadow: 0 0 30px rgba(0, 153, 255, 0.8);
-    border-radius: 20px;
-    color: var(--secondary);
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.game:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-}
-
-.game img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.game h3 {
-    font-size: 25px;
-    margin-top: 10px;
-}
-
-.games {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 #time {
-    color: var(--font);
+    color: rgb(172, 0, 172);
     font-size: 30px;
-    margin: auto;
-    margin-right: 21vh;
+    text-align: center;
 }
 
 .settings {
@@ -557,4 +427,28 @@ body {
     height: 100px;
     width: 100%;
     border-radius: 16px;
+}
+.home-button {
+    width: 50px;
+    height: 50px;
+    background-color: #131313;
+    color: rgb(172, 0, 172);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+#url-input {
+    background-color: #363636;
+    border: none;
+    color: white;
+    width: 1625px;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 15px;
+    text-indent: 15px;
+}
+#url-input::placeholder {
+    color: white;
+    font-size: 15px;
+    text-indent: 15px;
 }
