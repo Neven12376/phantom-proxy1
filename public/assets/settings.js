@@ -1,13 +1,10 @@
 var proxySelect = document.getElementById("proxy-select");
 var wispSelect = document.getElementById("wisp-select");
-var ab = document.getElementById("ab");
-var blooket = document.getElementById("blooket");
-var gimkit = document.getElementById("gimkit");
 
 if (proxySelect) {
   proxySelect.value = localStorage.getItem("proxy") || "uv";
   proxySelect.addEventListener("change", function () {
-    localStorage.setItem("proxy", proxySelect.value);
+    localStorage.setItem("proxy", proxySelect.value); 
   });
 }
 
@@ -26,59 +23,29 @@ if (wispSelect) {
     }
   });
 }
+// Content for each settings section
+let settingsContent = {
+  general: '<h1>General Settings</h1><p>Configure your general preferences here.</p>',
+  themes: '<h1>Themes</h1><p>Customize the look and feel of your app here.</p>',
+  advanced: '<h1>Advanced Settings</h1><p>Manage advanced configurations here.</p>',
+};
 
-if (ab) {
-  ab.addEventListener("click", function () {
-    var abtab = window.open("about:blank", "blank");
-    abtab.document.write(`
-  <html>
-    <head>
-      
-      <style>
-        body, html {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-        }
-        iframe {
-          width: 100%;
-          height: 100%;
-          border: none;
-        }
-      </style>
-    </head>
-    <body>
-      <iframe src="/index.html" frameborder="0"></iframe>
-    </body>
-  </html>
-`);
-    window.location.href = "https://classroom.google.com/u/";
-  });
-}
+// Add event listeners to the buttons
+document.querySelectorAll('.settings-button').forEach(button => {
+  button.addEventListener('click', () => {
+    // Get the value of the data-content attribute
+    const contentKey = button.getAttribute('data-content');
+    console.log(`Button clicked with data-content: ${contentKey}`); // Debugging
 
-if (blooket) {
-  blooket.addEventListener("click", async function () {
-    try {
-      const response = await fetch('/assets/cheats/blooket.txt');
-      const text = await response.text();
-      await navigator.clipboard.writeText(text);
-      alert("Copied to clipboard!");
-    } catch (err) {
-      alert("Failed to copy cheats");
+    // Update the settings div
+    const settingsDiv = document.querySelector('.settings');
+    if (settingsContent[contentKey]) {
+      settingsDiv.innerHTML = settingsContent[contentKey];
+    } else {
+      settingsDiv.innerHTML = '<h1>Not Found</h1>';
+      console.error(`Content not found for key: ${contentKey}`); // Debugging
     }
   });
-}
+});
 
-if (gimkit) {
-  gimkit.addEventListener("click", async function () {
-    try {
-      const response = await fetch('/assets/cheats/gimkit.txt');
-      const text = await response.text();
-      await navigator.clipboard.writeText(text);
-      alert("Copied to clipboard!");
-    } catch (err) {
-      alert("Failed to copy cheats");
-    }
-  });
-}
+
