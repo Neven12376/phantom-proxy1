@@ -84,6 +84,7 @@ if (form && input) {
         async function rhEncode() {
             url = await RammerheadEncode(url);
             window.location.href = "/" + url;
+            window.location.href = "/browser.html";
         }
         async function uvEncode() {
             url = __uv$config.prefix + __uv$config.encodeUrl(url);
