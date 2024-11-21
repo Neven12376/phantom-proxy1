@@ -19,11 +19,13 @@ For steps to deploy search it up on Youtube or ask ChatGPT
 
 This is a Node JS application with npm packages. To run locally you must first run the following:
 
-npm I
+git clone https://github.com/DrNate1010/phantom-proxy
 
-then run
+npm i
 
-npm start
+pnpm i
+
+pnpm start
 
 You should have a local Bolt on localhost:8080!
 
