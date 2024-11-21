@@ -27,7 +27,7 @@ pnpm i
 
 pnpm start
 
-You should have a local Bolt on localhost:8080!
+You should have phantom loaded on localhost:8080!
 
 Made By DrNate1010, vannsigma, And Neven12376
 
