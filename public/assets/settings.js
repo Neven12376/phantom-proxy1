@@ -25,10 +25,34 @@ if (wispSelect) {
 }
 // Content for each settings section
 let settingsContent = {
-  general: '<h1>General Settings</h1><p>Configure your general preferences here.</p>',
-  themes: '<h1>Themes</h1><p>Customize the look and feel of your app here.</p>',
-  advanced: '<h1>Advanced Settings</h1><p>Manage advanced configurations here.</p>',
+  general: `
+    <h1>General Settings</h1>
+    <p>Configure your general preferences here.</p>
+  `,
+  themes: `
+    <h1>Themes</h1>
+    <p>Customize the look and feel of your app here.</p>
+  `,
+  advanced: `
+    <div class="settings-item" id="proxy">
+      <h1 class="proxytitle">Proxy</h1>
+      <select id="proxy-select">
+        <option value="uv">Ultraviolet</option>
+        <option value="sj">Scramjet</option>
+        <option value="rammerhead">Rammerhead</option>
+      </select>
+    </div>
+
+    <div class="settings-item" id="wisp">
+      <h1 class="proxytitle">Wisp</h1>
+      <select id="wisp-select">
+        <option value="default">Default</option>
+        <option value="tp">Third-Party</option>
+      </select>
+    </div>
+  `,
 };
+
 
 // Add event listeners to the buttons
 document.querySelectorAll('.settings-button').forEach(button => {
