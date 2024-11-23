@@ -1,18 +1,27 @@
 It does not deploy to 
 
 -Vercel
+
 -Netlify
+
 -GitHub Pages
+
 -StackBlitz
 
 However, it does deploy to
 
 -Render
+
 -Codeanywhere
+
 -Gitpod
+
 -Koyeb
+
 -CodeSandbox
+
 -Github Codespaces
+
 -Railway
 
 For steps to deploy search it up on Youtube or ask ChatGPT
@@ -22,6 +31,7 @@ This is a Node JS application with npm packages. To run locally you must first r
 git clone https://github.com/DrNate1010/phantom-proxy
 
 npm i
+
 npm start
 
 You should have phantom loaded on localhost:8080!
