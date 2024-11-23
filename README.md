@@ -22,10 +22,7 @@ This is a Node JS application with npm packages. To run locally you must first r
 git clone https://github.com/DrNate1010/phantom-proxy
 
 npm i
-
-pnpm i
-
-pnpm start
+npm start
 
 You should have phantom loaded on localhost:8080!
 
