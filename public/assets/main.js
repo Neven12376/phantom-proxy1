@@ -15,13 +15,13 @@ async function init() {
             console.log("Using websocket transport " + "wisp url is: " + wispUrl);
         }
         const scramjet = new ScramjetController({
-            prefix: "/scram/service/",
+            prefix: "/scramjet/service/",
             files: {
-                wasm: "/scram/scramjet.wasm.js",
-                worker: "/scram/scramjet.worker.js",
-                client: "/scram/scramjet.client.js",
-                shared: "/scram/scramjet.shared.js",
-                sync: "/scram/scramjet.sync.js"
+                wasm: "/scramjet/scramjet.wasm.js",
+                worker: "/scramjet/scramjet.worker.js",
+                client: "/scramjet/scramjet.client.js",
+                shared: "/scramjet/scramjet.shared.js",
+                sync: "/scramjet/scramjet.sync.js"
             },
         });
         window.sj = scramjet;
@@ -85,16 +85,19 @@ if (form && input) {
             url = await RammerheadEncode(url);
             window.location.href = "/" + url;
             window.location.href = "/browser.html";
+            console.log('van is retarded');
         }
         async function uvEncode() {
             url = __uv$config.prefix + __uv$config.encodeUrl(url);
             localStorage.setItem("url", url);
             window.location.href = "/browser.html";
+            console.log('van is retarded');
         }
         async function sjEncode() {
-            url = "/scram/service/" + encodeURIComponent(url);
+            url = "/scramjet/service/" + encodeURIComponent(url);
             localStorage.setItem("url", url);
             window.location.href = "/browser.html";
+            console.log('van is retarded');
         }
     });
 
